@@ -6,3 +6,8 @@ app = FastAPI()
 @app.get("/")
 def accueil():
     return {"message": "Bonjour depuis greenodes, sans Dockerfile"}
+
+
+@app.get("/health")
+def sante():
+    return {"status": "ok"}
